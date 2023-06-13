@@ -99,8 +99,8 @@ function cloneTC() {
 	elif [ $COMPILER = "clang9" ];
 	then
 	#git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/ -b android10-gsi --depth 1 --no-tags --single-branch clang_all
-    wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/android-9.0.0_r6/clang-4639204.tar.gz 
-    mkdir clang && mv clang-4639204.tar.gz clang && cd clang && tar -xzvf clang-4639204.tar.gz
+    wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/android-9.0.0_r6/clang-4639204.tar.gz && tar -xzvf clang-4639204.tar.gz
+    mv clang-4639204 clang
     cd ..
     #mv clang_all/clang-r353983c clang
     #rm -rf clang_all
