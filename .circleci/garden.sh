@@ -11,7 +11,7 @@ KERNEL_DIR="$(pwd)"
 ##----------------------------------------------------------##
 # Device Name and Model
 MODEL=Xiaomi
-DEVICE=angelica
+DEVICE=garden
 
 
 # Kernel Version Code
@@ -25,9 +25,9 @@ DISABLE_LTO=1
 THIN_LTO=0
 
 # Files
-IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz
+IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz-dtb
 #DTBO=$(pwd)/out/arch/arm64/boot/dtbo.img
-DTB=$(pwd)/out/arch/arm64/boot/dts/mediatek
+#DTB=$(pwd)/out/arch/arm64/boot/dts/mediatek
 
 # Verbose Build
 VERBOSE=0
@@ -320,7 +320,7 @@ function zipping() {
 	# Copy Files To AnyKernel3 Zip
 	cp $IMAGE AnyKernel3
 	#cp $DTBO AnyKernel3
-	find $DTB -name "*.dtb" -exec cat {} + > AnyKernel3/dtb
+	#find $DTB -name "*.dtb" -exec cat {} + > AnyKernel3/dtb
 	
 	# Zipping and Push Kernel
 	cd AnyKernel3 || exit 1
