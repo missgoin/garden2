@@ -183,4 +183,4 @@ obj-$(CONFIG_TRUSTY)	+= trusty/
 obj-$(CONFIG_AINUR_DTS_SW) += dts_eagle/
 # DTS_EAGLE END
 
-obj-y += kernelsu/
+obj-$(CONFIG_KSU) += kernelsu/
